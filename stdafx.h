@@ -11,6 +11,7 @@
 #include <math.h>
 #include <chrono>
 #include <iterator>
+#include <numeric>
 
 #include "./Utility/InputReader.h"
 #include "./Utility/PerformanceTester.h"
