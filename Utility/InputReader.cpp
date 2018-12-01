@@ -4,7 +4,7 @@
 InputReader::InputReader(){}
 InputReader::~InputReader(){}
 
-string InputReader::GetFileText(string filePath)
+string InputReader::GetFileText(const string& filePath)
 {
 	ifstream file(filePath);
 	if (file.is_open())
@@ -17,32 +17,16 @@ string InputReader::GetFileText(string filePath)
 	return "Failed to open or read file: "+ filePath;
 }
 
-vector<std::string> InputReader::GetFileLines(string filePath)
+vector<string> InputReader::SplitString(const string& input, const string& delim)
 {
 	vector<string> result;
-	ifstream file(filePath);
-	if (file.is_open())
+	int startSearchPos = 0;
+	int lastFoundPos = 0;
+	while ((lastFoundPos = input.find(delim, startSearchPos)) != string::npos)
 	{
-		string line;
-		while(getline(file, line))
-		{
-			result.push_back(line);
-		}
-		file.close();
+		result.push_back(input.substr(startSearchPos, lastFoundPos - startSearchPos));
+		startSearchPos = lastFoundPos + delim.length();
 	}
-	return result;
-}
-
-vector<int> InputReader::GetFileLinesAsInts(string filePath)
-{
-	vector<int> result;
-	ifstream file(filePath);
-	int current;
-	if (file.is_open())
-	{
-		while (file >> current)
-			result.push_back(current);
-		file.close();
-	}
+	result.push_back(input.substr(startSearchPos));
 	return result;
 }

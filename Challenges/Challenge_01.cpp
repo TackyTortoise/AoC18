@@ -7,7 +7,7 @@ Challenge_01::~Challenge_01() = default;
 
 void Challenge_01::Part1()
 {
-	auto input = InputReader::GetFileLinesAsInts("../Input/01.txt");
+	auto input = InputReader::GetFileLines<int>("../Input/01.txt");
 	int currentFreq = 0;
 	for (int change : input)
 		currentFreq += change;
@@ -18,7 +18,7 @@ void Challenge_01::Part1()
 
 void Challenge_01::Part2()
 {
-	auto input = InputReader::GetFileLinesAsInts("../Input/01.txt");
+	auto input = InputReader::GetFileLines<int>("../Input/01.txt");
 	int currentFreq = 0;
 	int i = 0;
 	//Set test

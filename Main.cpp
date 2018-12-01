@@ -5,19 +5,17 @@
 
 int main()
 {
-	Challenge* today = new Challenge_02();
+	Challenge_02 today;
 	PerformanceTester::Start();
 	cout << "Part 1 output: " << endl;
-	today->Part1();
+	today.Part1();
 	cout << "Part 1 runtime in ms: ";
 	PerformanceTester::StopAndLog();
 
 	PerformanceTester::Start();
 	cout << "\nPart 2 output: " << endl;
-	today->Part2();
+	today.Part2();
 	cout << "Part 2 runtime in ms: ";
 	PerformanceTester::StopAndLog();
 	cin.get();
-
-	delete today;
 }
