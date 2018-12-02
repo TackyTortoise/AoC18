@@ -12,6 +12,7 @@
 #include <chrono>
 #include <iterator>
 #include <numeric>
+#include <map>
 
 #include "./Utility/InputReader.h"
 #include "./Utility/PerformanceTester.h"
