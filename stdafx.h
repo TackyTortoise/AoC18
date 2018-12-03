@@ -7,12 +7,14 @@
 #include <fstream>
 #include <sstream>
 #include <set>
+#include <unordered_set>
 #include <algorithm>
 #include <math.h>
 #include <chrono>
 #include <iterator>
 #include <numeric>
 #include <map>
+#include <regex>
 
 #include "./Utility/InputReader.h"
 #include "./Utility/PerformanceTester.h"
