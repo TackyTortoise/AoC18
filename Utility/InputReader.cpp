@@ -30,3 +30,17 @@ vector<string> InputReader::SplitString(const string& input, const string& delim
 	result.push_back(input.substr(startSearchPos));
 	return result;
 }
+
+set<string> InputReader::SplitStringSet(const string& input, const string& delim)
+{
+	set<string> result;
+	int startSearchPos = 0;
+	int lastFoundPos = 0;
+	while ((lastFoundPos = input.find(delim, startSearchPos)) != string::npos)
+	{
+		result.insert(input.substr(startSearchPos, lastFoundPos - startSearchPos));
+		startSearchPos = lastFoundPos + delim.length();
+	}
+	result.insert(input.substr(startSearchPos));
+	return result;
+}

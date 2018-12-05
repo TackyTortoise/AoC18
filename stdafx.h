@@ -15,6 +15,8 @@
 #include <numeric>
 #include <map>
 #include <regex>
+#include <cctype>
+#include <ctime>
 
 #include "./Utility/InputReader.h"
 #include "./Utility/PerformanceTester.h"
