@@ -139,31 +139,3 @@ Challenge_04::Entry::Entry(string input)
 	else
 		action = input.find("falls") != string::npos ? -1 : -2;
 }
-
-bool Challenge_04::Entry::operator<(const Entry& o)
-{
-	if (year < o.year)
-		return true;
-	if (month < o.month)
-		return true;
-	if (day < o.day)
-		return true;
-	int thour = hour == 0 ? 24 : o.hour;
-	int ohour = o.hour == 0 ? 24 : o.hour;
-	if (thour < ohour)
-		return true;
-	return minute < o.minute && hour <= o.hour && day <= o.day && month <= o.month && year <= o.year;
-}
-
-bool operator<(const  Challenge_04::Entry& a, const  Challenge_04::Entry& b)
-{
-	if (a.year < b.year)
-		return true;
-	if (a.month < b.month)
-		return true;
-	if (a.day < b.day)
-		return true;
-	if (a.hour < b.hour)
-		return true;
-	return a.minute < b.minute;
-}

@@ -19,8 +19,6 @@ public:
 		int hour = 0;
 		int minute = 0;
 		int action; //-1 is fall asleep, -2 is wake up, 0 or higher is guard number
-
-		bool operator <(const Entry& o);
 	};
 
 	struct Guard
@@ -34,8 +32,7 @@ public:
 		{
 			int totalSecondsA = stopEntry.month * 31 * 24 * 60 + stopEntry.day * 24 * 60 + stopEntry.hour * 60 + stopEntry.minute;
 			int totalSecondsB = lastSleepTime.month * 31 * 24 * 60 + lastSleepTime.day * 24 * 60 + lastSleepTime.hour * 60 + lastSleepTime.minute;
-			double difference;
-			difference = abs(totalSecondsB - totalSecondsA);
+			int difference = abs(totalSecondsB - totalSecondsA);
 			if (stopEntry.minute > lastSleepTime.minute)
 			{
 				for (int i = lastSleepTime.minute; i < stopEntry.minute; ++i)

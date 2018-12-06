@@ -5,13 +5,14 @@
 #include "./Challenges/Challenge_03.h"
 #include "./Challenges/Challenge_04.h"
 #include "./Challenges/Challenge_05.h"
+#include "./Challenges/Challenge_06.h"
 
 int main()
 {
-	Challenge_04 today;
+	Challenge_06 today;
 	PerformanceTester::Start();
 	cout << "Part 1 output: " << endl;
-	//today.Part1(); 
+	today.Part1(); 
 	cout << "Part 1 runtime in ms: ";
 	PerformanceTester::StopAndLog();
 
