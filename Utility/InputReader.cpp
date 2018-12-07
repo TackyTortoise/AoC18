@@ -44,3 +44,18 @@ set<string> InputReader::SplitStringSet(const string& input, const string& delim
 	result.insert(input.substr(startSearchPos));
 	return result;
 }
+
+std::vector<std::string> InputReader::GetRawLines(const std::string& filePath)
+{
+	vector<string> result;
+	ifstream file(filePath);
+	if (file.is_open())
+	{
+		string line;
+		while (getline(file, line))
+			result.push_back(line);
+		file.close();
+	}
+
+	return result;
+}

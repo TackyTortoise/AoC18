@@ -9,12 +9,13 @@ public:
 	static std::string GetFileText(const std::string& filePath);
 	static std::vector<std::string> SplitString(const std::string& input, const std::string& delim);
 	template<typename T>
-	static std::vector<T> GetFileLines(std::string filePath);
+	static std::vector<T> GetFileLines(const std::string& filePath);
 	static std::set<std::string> SplitStringSet(const std::string& input, const std::string& delim);
+	static std::vector<std::string> GetRawLines(const std::string& filePath);
 };
 
 template<typename T>
-std::vector<T> InputReader::GetFileLines(std::string filePath)
+std::vector<T> InputReader::GetFileLines(const std::string& filePath)
 {
 	std::ifstream file(filePath);
 	if (file.is_open())

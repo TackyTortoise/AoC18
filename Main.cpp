@@ -6,10 +6,11 @@
 #include "./Challenges/Challenge_04.h"
 #include "./Challenges/Challenge_05.h"
 #include "./Challenges/Challenge_06.h"
+#include "./Challenges/Challenge_07.h"
 
 int main()
 {
-	Challenge_06 today;
+	Challenge_07 today;
 	PerformanceTester::Start();
 	cout << "Part 1 output: " << endl;
 	today.Part1(); 
