@@ -26,7 +26,7 @@ Challenge_08::Node* Challenge_08::ProcessNode(int& cursor, const vector<int>& in
 	++cursor;
 	int metaData = input[cursor];
 	++cursor;
-	Node* newNode = new Node(children, metaData);
+	Node* newNode = new Node();
 
 	if (parent != nullptr)
 		parent->childNodes.push_back(newNode);

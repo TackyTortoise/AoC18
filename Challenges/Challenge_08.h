@@ -11,17 +11,15 @@ public:
 
 	struct Node
 	{
-		Node(int childC, int metaC) { childCount = childC, metaCount = metaC; }
+		Node() = default;
 
-		int childCount;
-		int metaCount;
 		vector<Node*> childNodes;
 		vector<int> metaEntries;
 
 		int GetValue()
 		{
 			int sum = 0;
-			if (childCount == 0)
+			if (childNodes.size() == 0)
 			{
 				for (auto meta : metaEntries)
 					sum += meta;
