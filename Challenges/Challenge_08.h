@@ -35,6 +35,15 @@ public:
 			}
 			return sum;
 		}
+
+		void DeleteChildren()
+		{
+			for (auto child : childNodes)
+			{
+				child->DeleteChildren();
+				delete child;
+			}
+		}
 	};
 
 	Node* ProcessNode(int& cursor, const vector<int>& input, Node* parent, int& totalMeta);

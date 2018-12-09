@@ -1,3 +1,7 @@
+#define _CRTDBG_MAP_ALLOC  
+#include <stdlib.h>  
+#include <crtdbg.h>  
+
 #include "stdafx.h"
 #include "./Challenges/Challenge.h"
 #include "./Challenges/Challenge_01.h"
@@ -8,20 +12,25 @@
 #include "./Challenges/Challenge_06.h"
 #include "./Challenges/Challenge_07.h"
 #include "./Challenges/Challenge_08.h"
+#include "./Challenges/Challenge_09.h"
+#include "./Challenges/Challenge_10.h"
 
 int main()
 {
-	Challenge_08 today;
-	PerformanceTester::Start();
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	Challenge_10 today;
 	cout << "Part 1 output: " << endl;
-	today.Part1(); 
-	cout << "Part 1 runtime in ms: ";
-	PerformanceTester::StopAndLog();
-
 	PerformanceTester::Start();
+	today.Part1();
+	PerformanceTester::Stop();
+	cout << "Part 1 runtime in microseconds: ";
+	PerformanceTester::Log();
+
 	cout << "\nPart 2 output: " << endl;
+	PerformanceTester::Start();
 	today.Part2();
-	cout << "Part 2 runtime in ms: ";
-	PerformanceTester::StopAndLog();
+	PerformanceTester::Stop();
+	cout << "Part 2 runtime in microseconds: ";
+	PerformanceTester::Log();
 	cin.get();
 }

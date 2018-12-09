@@ -9,6 +9,8 @@ void Challenge_08::Part1()
 	int totalMeta = 0;
 	Node* root = ProcessNode(cursor, input, nullptr, totalMeta);
 	cout << totalMeta << endl;
+	root->DeleteChildren();
+	delete root;
 }
 
 void Challenge_08::Part2()
@@ -18,6 +20,8 @@ void Challenge_08::Part2()
 	int totalMeta = 0;
 	Node* root = ProcessNode(cursor, input, nullptr, totalMeta);
 	cout << root->GetValue() << endl;
+	root->DeleteChildren();
+	delete root;
 }
 
 Challenge_08::Node* Challenge_08::ProcessNode(int& cursor, const vector<int>& input, Node* parent, int& totalMeta)

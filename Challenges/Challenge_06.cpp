@@ -65,6 +65,8 @@ void Challenge_06::Part1()
 	}
 
 	cout << maxArea << endl;
+
+	delete[] grid;
 }
 
 
@@ -115,6 +117,7 @@ void Challenge_06::Part2()
 	}
 
 	cout << total << endl;
+	delete[] grid;
 }
 
 //Why the hell did I write this stuff, for some reason I assumed there could be multiple regions of the same value split apart, which is dumb, leaving this code here to learn from it and maybe use for something in the future

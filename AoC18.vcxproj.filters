@@ -54,6 +54,9 @@
     <ClInclude Include="Challenges\Challenge_09.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Challenges\Challenge_10.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -90,6 +93,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Challenges\Challenge_09.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Challenges\Challenge_10.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
