@@ -73,7 +73,7 @@ void Challenge_09::Part2()
 	};
 
 	const int maxPlayers = 404;
-	const int maxMarble = 71852;
+	const int maxMarble = 7185200;
 	long long playerScores[maxPlayers];
 	memset(playerScores, 0, maxPlayers * sizeof(long long));
 	Marble* current = new Marble(0, nullptr, nullptr);

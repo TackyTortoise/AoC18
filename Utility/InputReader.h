@@ -12,6 +12,7 @@ public:
 	static std::vector<T> GetFileLines(const std::string& filePath);
 	static std::set<std::string> SplitStringSet(const std::string& input, const std::string& delim);
 	static std::vector<std::string> GetRawLines(const std::string& filePath);
+	static std::vector<int> GetNumbersFromString(std::string string);
 };
 
 template<typename T>

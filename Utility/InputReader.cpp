@@ -59,3 +59,16 @@ std::vector<std::string> InputReader::GetRawLines(const std::string& filePath)
 
 	return result;
 }
+
+std::vector<int> InputReader::GetNumbersFromString(std::string string)
+{
+	regex rgx("-?[0-9]+");
+	smatch match;
+	vector<int> result;
+	while (regex_search(string, match, rgx) && match.size() > 0)
+	{
+		result.push_back(stoi(match[0].str()));
+		string = match.suffix().str();
+	}
+	return result;
+}
