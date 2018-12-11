@@ -50,10 +50,10 @@ void Challenge_10::Part1()
 		}
 	}
 
-	int width = 100;
+	int width = 62;
 	int height = 10;
 	char* field = new char[width * height];
-	memset(field, '.', width * height);
+	memset(field, ' ', width * height);
 	for (auto l = 0; l < input.size(); ++l)
 	{
 		LightPoint light = lights[l];
@@ -65,7 +65,7 @@ void Challenge_10::Part1()
 			break;
 		}
 		int idx = x + y * width;
-		field[idx] = '#';
+		field[idx] = '*';
 	}
 
 	for (int i = 0; i < width * height; ++i)
