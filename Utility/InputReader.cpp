@@ -56,6 +56,8 @@ std::vector<std::string> InputReader::GetRawLines(const std::string& filePath)
 			result.push_back(line);
 		file.close();
 	}
+	else
+		std::cout << "failed to open file " << filePath << endl;
 
 	return result;
 }
