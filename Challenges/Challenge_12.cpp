@@ -91,6 +91,7 @@ void Challenge_12::Part2()
 		}
 		int firstPlant = newState.find('#');
 		int lastPlant = newState.rfind('#');
+		frontAdded += 4 - firstPlant;
 		state = newState.substr(firstPlant, lastPlant - firstPlant + 1);
 
 		if (!stahp)
