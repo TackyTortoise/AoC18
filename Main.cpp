@@ -16,11 +16,12 @@
 #include "./Challenges/Challenge_10.h"
 #include "./Challenges/Challenge_11.h"
 #include "./Challenges/Challenge_12.h"
+#include "./Challenges/Challenge_13.h"
 
 int main()
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-	Challenge_12 today;
+	Challenge_13 today;
 	cout << "Part 1 output: " << endl;
 	PerformanceTester::Start();
 	today.Part1();

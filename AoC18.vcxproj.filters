@@ -63,6 +63,9 @@
     <ClInclude Include="Challenges\Challenge_12.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Challenges\Challenge_13.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -108,6 +111,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Challenges\Challenge_12.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Challenges\Challenge_13.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
