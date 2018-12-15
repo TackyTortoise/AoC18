@@ -18,14 +18,15 @@
 #include "./Challenges/Challenge_12.h"
 #include "./Challenges/Challenge_13.h"
 #include "./Challenges/Challenge_14.h"
+#include "./Challenges/Challenge_15.h"
 
 int main()
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-	Challenge_14 today;
+	Challenge_15 today;
 	cout << "Part 1 output: " << endl;
 	PerformanceTester::Start();
-	today.Part1();
+	//today.Part1();
 	PerformanceTester::Stop();
 	cout << "Part 1 runtime in microseconds: ";
 	PerformanceTester::Log();

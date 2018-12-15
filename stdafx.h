@@ -20,5 +20,6 @@
 
 #include "./Utility/InputReader.h"
 #include "./Utility/PerformanceTester.h"
+#include "./Utility/Utils.h"
 
 using namespace std;
