@@ -17,6 +17,7 @@
 #include <regex>
 #include <cctype>
 #include <ctime>
+#include <functional>
 
 #include "./Utility/InputReader.h"
 #include "./Utility/PerformanceTester.h"

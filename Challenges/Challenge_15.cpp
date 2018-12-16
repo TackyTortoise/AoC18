@@ -194,6 +194,8 @@ void Challenge_15::Part1()
 						if (it != goblins.end())
 							goblins.erase(it);
 					}
+
+					delete closestTarget;
 				}
 
 				if (elfs.size() == 0 || goblins.size() == 0)
@@ -238,6 +240,11 @@ void Challenge_15::Part1()
 	cout << "Rounds: " << round << endl;
 	cout << "Total hp: " << total << endl;
 	cout << total * round << endl;
+
+	for (auto e : elfs)
+		delete e;
+	for (auto g : goblins)
+		delete g;
 }
 
 void Challenge_15::Part2()
@@ -440,6 +447,8 @@ void Challenge_15::Part2()
 						}
 					}
 
+					delete closestTarget;
+
 					if (elfs.size() == 0 || goblins.size() == 0)
 					{
 						stahp = true;
@@ -469,4 +478,9 @@ void Challenge_15::Part2()
 			cout << "No elfs lost at attack power " << attackPower << endl;
 		}
 	}
+
+	for (auto e : elfs)
+		delete e;
+	for (auto g : goblins)
+		delete g;
 }
