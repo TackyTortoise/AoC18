@@ -8,5 +8,10 @@ public:
 	
 	void Part1() override;
 	void Part2() override;
+
+	void PrintField(char* field, int width, int height);
+	int FirstHitDown(char* field, int startIndex, int width, int height);
+	int FirstHitLeft(char* field, int startIndex, int width, int height);
+	int FirstHitRight(char* field, int startIndex, int width, int height);
 };
 

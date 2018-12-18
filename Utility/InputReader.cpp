@@ -74,3 +74,15 @@ std::vector<int> InputReader::GetNumbersFromString(std::string string)
 	}
 	return result;
 }
+
+void InputReader::PrintField(char* field, int width, int height)
+{
+	cout << endl;
+	for (int i = 0; i < width * height; ++i)
+	{
+		if (i > 0 && i % width == 0)
+			cout << endl;
+		cout << field[i];
+	}
+	cout << endl;
+}

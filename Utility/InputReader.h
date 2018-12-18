@@ -13,6 +13,7 @@ public:
 	static std::set<std::string> SplitStringSet(const std::string& input, const std::string& delim);
 	static std::vector<std::string> GetRawLines(const std::string& filePath);
 	static std::vector<int> GetNumbersFromString(std::string string);
+	static void PrintField(char* field, int width, int height);
 };
 
 template<typename T>
